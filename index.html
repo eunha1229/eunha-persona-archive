@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Persona Archive</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@300&family=Marcellus&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=100">
+</head>
+<body>
+<div class="app-shell">
+<aside class="sidebar" id="sidebar">
+  <div class="brand"><span class="brand-star">✦</span><div><b>PERSONA</b><span>ARCHIVE</span></div></div>
+  <label class="search"><span>⌕</span><span id="searchInput" class="search-editable" contenteditable="true" role="searchbox" aria-label="Search archive" data-placeholder="Search archive..." spellcheck="false"></span></label>
+  <nav class="main-nav">
+    <button class="nav-item active" data-view="home">◈ <span>HOME</span></button>
+    <button class="nav-item" data-view="personas">◇ <span>PERSONAS</span></button>
+  </nav>
+  <section class="side-section"><div class="side-title">WORLDS</div><div id="worldList"></div></section>
+  <div class="sidebar-spacer"></div>
+  <button class="new-entry" id="newEntryBtn">＋ NEW ENTRY</button>
+  <div class="version">PERSONA ARCHIVE · v1.0.0</div>
+  <div class="credit">made by @2by4_JourNey</div>
+</aside>
+<main class="main">
+<header class="topbar">
+<button class="menu-btn" id="menuBtn">☰</button>
+<div class="crumb" id="crumb">ARCHIVE / HOME</div>
+<div class="top-actions"><button class="connect-btn" id="githubBtn">GITHUB · CONNECT</button><button class="icon-btn" id="themeBtn">☾</button></div>
+</header>
+<div id="content"></div>
+</main>
+</div>
+<input type="file" id="importMd" accept=".md,.markdown,text/markdown" hidden>
+<div class="modal-backdrop" id="githubModal" hidden>
+ <div class="modal">
+  <button class="modal-x" id="githubClose">×</button>
+  <div class="eyebrow">✦ GitHub writer</div>
+  <h2>Connect Archive</h2>
+  <p>이 브라우저에서만 사용하는 GitHub fine-grained token을 입력합니다. 저장소 코드는 토큰을 포함하지 않습니다.</p>
+  <label>OWNER<input id="ghOwner" placeholder="your-github-id"></label>
+  <label>REPOSITORY<input id="ghRepo" placeholder="your-archive-repository"></label>
+  <label>BRANCH<input id="ghBranch" value="main"></label>
+  <label>FINE-GRAINED TOKEN<input id="ghToken" type="password" placeholder="github_pat_..."></label>
+  <div class="modal-actions"><button class="action-btn primary" id="ghSave">CONNECT</button><button class="action-btn" id="ghForget">FORGET TOKEN</button></div>
+  <div class="setup-guide"><b>FIRST SETUP</b><ol><li>이 템플릿으로 본인 GitHub 저장소를 만듭니다.</li><li>저장소 Settings → Pages에서 <b>main / root</b>로 Pages를 켭니다.</li><li>Fine-grained token을 만들고 이 저장소 하나만 선택합니다.</li><li>Repository permissions의 <b>Contents → Read and write</b>만 허용합니다.</li><li>이 창에 토큰을 붙여넣고 CONNECT를 누릅니다.</li></ol><p>토큰은 저장소 코드에 기록되지 않으며 현재 브라우저 세션에만 보관됩니다.</p></div>
+ </div>
+</div>
+<script src="js/app.js?v=100"></script>
+</body></html>
