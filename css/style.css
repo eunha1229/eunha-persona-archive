@@ -50,3 +50,10 @@ button,input,textarea{font:inherit}.app-shell{min-height:100vh;display:grid;grid
 
 /* v1.0.0 public template onboarding */
 .setup-guide{margin-top:18px;padding:14px 16px;border:1px solid var(--line);border-radius:10px;background:rgba(128,119,255,.045);color:#8992b8;font-size:10px;line-height:1.7}.setup-guide>b{display:block;color:#a9b0d2;font-size:9px;letter-spacing:.16em;margin-bottom:6px}.setup-guide ol{margin:6px 0 8px;padding-left:18px}.setup-guide p{margin:6px 0 0!important;font-size:9px!important}
+
+
+/* v1.1.0: shareable routes + viewer/owner mode */
+[hidden]{display:none!important}
+.viewer-mode .owner-only{display:none!important}
+.connect-btn:not(.connected)::before{content:"VIEWER · ";color:#626b91}
+.connect-btn.connected::before{content:"OWNER · ";color:#8fc8ff}

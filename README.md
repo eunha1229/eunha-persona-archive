@@ -28,3 +28,10 @@ Fine-grained token은 다른 사람에게 공유하지 마세요. 이 사이트�
 페르소나 생성/수정/삭제, 이미지 업로드, 월드 분류, 검색, 자유 텍스트 섹션, COPY 섹션, 홈 편집, GitHub 직접 저장을 지원합니다.
 
 made by @2by4_JourNey
+
+
+## 공유 / Viewer Mode
+
+아카이브 HOME 주소는 그대로 다른 사람에게 공유할 수 있습니다. GitHub token이 없는 방문자는 자동으로 Viewer Mode가 되어 NEW / EDIT / DELETE 버튼이 숨겨집니다. COPY 기능과 열람은 그대로 사용할 수 있습니다.
+
+각 페르소나는 `#/persona/<slug>` 형태의 고유 주소를 가집니다. 상세 페이지를 연 상태에서 브라우저 주소를 복사하면 해당 페르소나로 바로 연결됩니다. HOME은 `#/home`, 전체 PERSONAS는 `#/personas`로 이동할 수 있으며 기본 Pages 주소 자체도 HOME으로 작동합니다.
