@@ -1,37 +1,33 @@
-# Persona Archive v1.0.0
+# Persona Archive — Distribution v1.1.0
 
-개인 페르소나/캐릭터 설정과 프롬프트를 정리하는 GitHub Pages 기반 개인 아카이브입니다.
+개인 페르소나 설정과 AI 채팅 프롬프트를 GitHub Pages에 보관하고 공유할 수 있는 정적 아카이브입니다.
 
-## 시작하기
+## 처음 설치
 
-1. 이 저장소를 **Use this template**로 복사해 본인 계정에 새 저장소를 만듭니다.
-2. 저장소 **Settings → Pages**에서 `Deploy from a branch` / `main` / `/(root)`를 선택합니다.
-3. Pages 주소가 열리면 우측 상단 **GITHUB · CONNECT**를 누릅니다.
-4. GitHub 계정 Settings → Developer settings → Personal access tokens → Fine-grained tokens에서 토큰을 만듭니다.
-5. Repository access는 이 아카이브 저장소 하나만 선택하고, Repository permissions에서 **Contents: Read and write**만 추가합니다. Metadata의 Read-only는 GitHub 기본 권한입니다.
-6. 사이트의 CONNECT 창에 Owner / Repository / Branch / Token을 입력합니다. GitHub Pages 기본 주소로 접속했다면 Owner와 Repository는 자동 추정됩니다.
-7. **EDIT HOME**으로 홈 문구를 바꾸고 **NEW ENTRY**로 첫 페르소나를 추가합니다.
+1. 이 폴더의 파일 전체를 자신의 GitHub 저장소 루트에 업로드합니다. `.nojekyll`도 반드시 포함하세요.
+2. GitHub 저장소의 **Settings → Pages**에서 `Deploy from a branch`, `main`, `/(root)`를 선택합니다.
+3. 사이트가 배포되면 우측 상단 **GITHUB · CONNECT**를 누릅니다.
+4. 자신의 GitHub 사용자명, 저장소명, 브랜치(`main`)와 Fine-grained personal access token을 입력합니다.
+5. 토큰은 반드시 **자기 저장소에만** 권한을 주고, Repository permissions의 **Contents: Read and write**만 허용하세요. 다른 사람에게 토큰을 공유하지 마세요.
 
-## 보안
+## 포함 기능
 
-Fine-grained token은 다른 사람에게 공유하지 마세요. 이 사이트는 토큰을 저장소 파일에 기록하지 않으며 브라우저 `sessionStorage`에만 보관합니다. 브라우저 세션이 끝나면 다시 입력해야 할 수 있습니다. 토큰은 해당 아카이브 저장소 하나에만 접근하도록 제한하는 것을 권장합니다.
+- HOME 문구 사이트에서 편집
+- 페르소나 생성 / 수정 / 삭제
+- 동일 이름 캐릭터를 세계관별 별도 게시글로 관리
+- MAIN / SUB / OTHER 카테고리
+- WORLD / CATEGORY별 탐색 및 검색
+- 캐치프레이즈 / 짧은 소개 / 기본 프로필
+- 자유 TEXT SECTION / COPY SECTION
+- 섹션 순서 ↑ ↓ 재배치
+- 대표 이미지 및 다중 GALLERY 업로드
+- 갤러리 원본 비율 Lightbox, 이전/다음 탐색
+- 공개 URL 공유 시 Viewer 모드
 
-## 중요한 파일
+## 중요
 
-- `.nojekyll` — 삭제하지 마세요. Markdown 게시글을 GitHub Pages에서 그대로 읽기 위해 필요합니다.
-- `posts/index.json` — 게시글 목록. 사이트에서 글을 추가/삭제하면 자동 갱신됩니다.
-- `config/home.json` — 홈 화면 문구.
-- `assets/characters/` — 업로드한 캐릭터 이미지.
+`posts/index.json`은 게시글 목록을 읽는 데 필요합니다. `.nojekyll`은 Markdown 파일이 GitHub Pages에서 정상 제공되도록 하기 위해 필요하므로 삭제하지 마세요.
 
-## 기능
-
-페르소나 생성/수정/삭제, 이미지 업로드, 월드 분류, 검색, 자유 텍스트 섹션, COPY 섹션, 홈 편집, GitHub 직접 저장을 지원합니다.
+`assets/characters/`는 이미지 저장 위치입니다. 빈 폴더는 Git이 보존하지 않으므로 `.gitkeep`이 들어 있습니다.
 
 made by @2by4_JourNey
-
-
-## 공유 / Viewer Mode
-
-아카이브 HOME 주소는 그대로 다른 사람에게 공유할 수 있습니다. GitHub token이 없는 방문자는 자동으로 Viewer Mode가 되어 NEW / EDIT / DELETE 버튼이 숨겨집니다. COPY 기능과 열람은 그대로 사용할 수 있습니다.
-
-각 페르소나는 `#/persona/<slug>` 형태의 고유 주소를 가집니다. 상세 페이지를 연 상태에서 브라우저 주소를 복사하면 해당 페르소나로 바로 연결됩니다. HOME은 `#/home`, 전체 PERSONAS는 `#/personas`로 이동할 수 있으며 기본 Pages 주소 자체도 HOME으로 작동합니다.
